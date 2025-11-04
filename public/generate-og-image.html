@@ -102,7 +102,7 @@
         const ctx = canvas.getContext('2d');
         let logoImage = null;
 
-        // Load default logo
+        // Load logo from public folder
         const defaultLogo = new Image();
         defaultLogo.crossOrigin = 'anonymous';
         defaultLogo.onload = function() {
@@ -110,16 +110,25 @@
             generateOGImage();
         };
         defaultLogo.onerror = function() {
-            console.log('Default logo not found, will use uploaded logo');
-        };
-        // Try to load logo - user can upload if not found
-        // Logo will be loaded via file upload if default path doesn't work
-        setTimeout(() => {
-            if (!logoImage) {
-                console.log('Logo not automatically loaded. Please upload your logo using the file input above, or the image will be generated without logo.');
+            console.log('Logo not found at /logo.png, trying alternative paths...');
+            // Try alternative path
+            const altLogo = new Image();
+            altLogo.crossOrigin = 'anonymous';
+            altLogo.onload = function() {
+                logoImage = altLogo;
                 generateOGImage();
-            }
-        }, 500);
+            };
+            altLogo.onerror = function() {
+                console.log('Logo not found. Please upload your logo using the file input above.');
+                setTimeout(() => {
+                    if (!logoImage) {
+                        generateOGImage();
+                    }
+                }, 500);
+            };
+            altLogo.src = './logo.png';
+        };
+        defaultLogo.src = '/logo.png';
 
         // Handle logo upload
         document.getElementById('logoUpload').addEventListener('change', function(e) {
