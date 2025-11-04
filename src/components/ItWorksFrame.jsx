@@ -17,7 +17,7 @@ const ItWorksFrame = () => {
     <div className='max-w-[1170px] mx-auto rounded-2xl flex flex-col items-center lg:flex-row justify-between p-6 bg-white relative' data-aos="fade-up" data-aos-duration="2000">
         {/* plus-square */}
         <div className='w-6 h-6 absolute right-30 -top-3'>
-            <img src={plus} className='w-full object-cover' />
+            <img src={plus} alt="" className='w-full object-cover' aria-hidden="true" />
         </div>
 
 
@@ -27,7 +27,7 @@ const ItWorksFrame = () => {
         <div className='relative'>
             <h4 className='font-urbanist font-bold text-[80px] text-[#F3F3F3]'>01</h4>
             <div className='w-12 h-12 mt-0 relative -top-12 left-4'>
-                <img src={frame1} className='w-full object-cover'/>
+                <img src={frame1} alt="Create free account icon - step 1 of using Invoicer inventory management app" className='w-full object-cover'/>
             </div>
         </div>
         {/* writes */}
@@ -42,7 +42,7 @@ const ItWorksFrame = () => {
         <div className='relative'>
             <h4 className='font-urbanist font-bold text-[80px] text-[#F3F3F3]'>02</h4>
             <div className='w-12 h-12 mt-0 relative -top-12 left-4'>
-                <img src={frame2} className='w-full object-cover'/>
+                <img src={frame2} alt="Add products to inventory icon - step 2 of stock management setup" className='w-full object-cover'/>
             </div>
         </div>
         {/* writes */}
@@ -57,7 +57,7 @@ const ItWorksFrame = () => {
         <div className='relative'>
             <h4 className='font-urbanist font-bold text-[80px] text-[#F3F3F3]'>03</h4>
             <div className='w-12 h-12 mt-0 relative -top-12 left-4'>
-                <img src={frame3} className='w-full object-cover'/>
+                <img src={frame3} alt="Track sales in real-time icon - step 3 of POS system usage" className='w-full object-cover'/>
             </div>
         </div>
         {/* writes */}

@@ -1,0 +1,33 @@
+# robots.txt for Invoicer App
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://getinvoicer.app/sitemap.xml
+
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Disallow specific paths if needed (currently allowing all)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl delay (optional, in seconds)
+Crawl-delay: 1
+

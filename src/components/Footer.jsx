@@ -14,7 +14,7 @@ const Footer = () => {
             <div className='w-[278px]'>
                 <div className='w-[123px]'>
                     <Link to='/'>
-                        <img src={logo} alt="Company logo" className='w-full object-fit-cover'/>
+                        <img src={logo} alt="Invoicer logo - Inventory management and POS system app" className='w-full object-fit-cover'/>
                     </Link>
                 </div>
                 <p className='font-outfit font-[400] text-[16px] text-[#E6E6E6] leading-[150%]'>

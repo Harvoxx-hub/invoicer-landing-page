@@ -10,7 +10,7 @@ const Hero = () => {
       {/* image div */}
       <div className=''>
         <div className='w-[542px] h-[620px] relative'>
-            <img src={img1} alt="Image of a happy customer" className='object-cover w-full'/>
+            <img src={img1} alt="Invoicer POS system interface showing inventory management dashboard with sales alerts and stock tracking" className='object-cover w-full'/>
 
             {/* alert */}
             <div className='max-md:w-auto w-[316px] h-[105px] md:px-4 py-4 bg-white rounded-[8px] absolute top-[90px] left-[300px]'>

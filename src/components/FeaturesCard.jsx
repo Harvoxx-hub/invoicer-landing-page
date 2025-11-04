@@ -13,7 +13,7 @@ const FeaturesCard = () => {
       <div className={`w-[270px] h-[292px] rounded-[16px] py-8 px-4 bg-[#F3F7FF] flex flex-col gap-10 justify-center items-center text-center`}>
         {/* icon */}
         <div>
-            <img src={tracking} />
+            <img src={tracking} alt="Smart inventory tracking feature icon - real-time stock management system" />
         </div>
         {/* write-up */}
         <div className='space-y-2'>
@@ -25,7 +25,7 @@ const FeaturesCard = () => {
       <div className={`w-[270px] h-[292px] rounded-[16px] py-8 px-4 bg-[#FBF6EF] flex flex-col gap-10 justify-center items-center text-center`}>
         {/* icon */}
         <div>
-            <img src={saleRecord} />
+            <img src={saleRecord} alt="Quick sales recording feature icon - POS point of sale system" />
         </div>
         {/* write-up */}
         <div className='space-y-2'>
@@ -37,7 +37,7 @@ const FeaturesCard = () => {
       <div className={`w-[270px] h-[292px] rounded-[16px] py-8 px-4 bg-[#EEF9FE] flex flex-col gap-10 justify-center items-center text-center`}>
         {/* icon */}
         <div>
-            <img src={management} />
+            <img src={management} alt="Customer management feature icon - business relationship tracking" />
         </div>
         {/* write-up */}
         <div className='space-y-2'>
@@ -49,7 +49,7 @@ const FeaturesCard = () => {
       <div className={`w-[270px] h-[292px] rounded-[16px] py-8 px-4 bg-[#F4EDFC] flex flex-col gap-10 justify-center items-center text-center`}>
         {/* icon */}
         <div>
-            <img src={report} />
+            <img src={report} alt="Business reports feature icon - sales analytics and inventory insights" />
         </div>
         {/* write-up */}
         <div className='space-y-2'>

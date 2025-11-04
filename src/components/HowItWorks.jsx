@@ -18,7 +18,7 @@ const HowItWorks = () => {
       <ItWorksFrame />
 
       <div className='max-w-[1200px] mx-auto rounded-[20px]' data-aos="fade-up" data-aos-duration="3000">
-        <img src={worksImg} className='w-full object-cover' />
+        <img src={worksImg} alt="Invoicer app workflow demonstration showing inventory management and POS system features" className='w-full object-cover' />
       </div> 
     </div>
   )

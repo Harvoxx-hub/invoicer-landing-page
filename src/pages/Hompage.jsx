@@ -8,38 +8,42 @@ import CTA from '../components/CTA'
 
 const Hompage = () => {
   return (
-    <div>
-        {/* Hero section */}
-      <section className='bg-[#163300]'>
+    <main>
+        {/* Hero section - Main landing area */}
+      <section className='bg-[#163300]' aria-label="Hero section">
         {/* <Header /> */}
         <Heros />
       </section>
  
-      <section className='bg-[#163300]' id='features'>
+      {/* Features section - Inventory management features */}
+      <section className='bg-[#163300]' id='features' aria-label="Features section">
         <FeaturesSec />
       </section> 
       
-      <section id='works'>
+      {/* How it works section */}
+      <section id='works' aria-label="How it works section">
         <HowItWorks /> 
       </section>
 
-      <section id='benefits'>
+      {/* Benefits/Security section */}
+      <section id='benefits' aria-label="Benefits section">
         <Security />
       </section>
 
-      
-      <section id='testimonials'>
+      {/* Testimonials section */}
+      <section id='testimonials' aria-label="Testimonials section">
         <TestimonialSec />
       </section>
 
-      <section>
+      {/* Call to action section */}
+      <section aria-label="Call to action section">
         <CTA />
       </section>
 
       {/* <section>
         <Footer />
       </section> */}
-    </div>
+    </main>
   )
 }
 

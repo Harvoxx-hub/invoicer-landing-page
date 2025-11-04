@@ -25,26 +25,26 @@ const CTA = () => {
 
             {/* playstore and apple */}
             <div className='flex gap-4'>
-                <div className='w-[144px] h-[48px] bg-black rounded-[7.5px] flex items-center justify-center gap-2'>
-                            <div className='w-[24px] h-[28px]'>
-                              <img src={apple} className='w-full object-cover'/>
-                            </div>
-                            <div className='font-poppins text-white'>
-                              <p className='text-[11px] font-[500]'>Download on the</p>
-                              <p className='text-[21px] font-[500] -mt-2'>App Store</p>
-                            </div>
-                          </div>
-            
-                          <div className='w-[144px] h-[48px] bg-black rounded-[7.5px] flex items-center justify-center gap-2'>
-                            <div className='w-[24px] h-[28px]'>
-                              <img src={playstore} className='w-full object-cover'/>
-                            </div>
-                            <div className='font-poppins text-white'>
-                              <p className='text-[11px] font-[500]'>GET IT ON</p>
-                              <p className='text-[18px] font-[500] -mt-2'>Google Play</p>
-                            </div>
-                          </div>
-                        </div>
+                <a href="https://apps.apple.com/us/app/invoicer-pos-stock-manager/id6751941791" target="_blank" rel="noopener noreferrer" className='w-[144px] h-[48px] bg-black rounded-[7.5px] flex items-center justify-center gap-2 cursor-pointer hover:opacity-90 transition-opacity'>
+                  <div className='w-[24px] h-[28px]'>
+                    <img src={apple} alt="Download Invoicer inventory management app on App Store" className='w-full object-cover'/>
+                  </div>
+                  <div className='font-poppins text-white'>
+                    <p className='text-[11px] font-[500]'>Download on the</p>
+                    <p className='text-[21px] font-[500] -mt-2'>App Store</p>
+                  </div>
+                </a>
+      
+                <a href="https://play.google.com/store/apps/details?id=com.bwh.invoicer" target="_blank" rel="noopener noreferrer" className='w-[144px] h-[48px] bg-black rounded-[7.5px] flex items-center justify-center gap-2 cursor-pointer hover:opacity-90 transition-opacity'>
+                  <div className='w-[24px] h-[28px]'>
+                    <img src={playstore} alt="Download Invoicer stock management app on Google Play Store" className='w-full object-cover'/>
+                  </div>
+                  <div className='font-poppins text-white'>
+                    <p className='text-[11px] font-[500]'>GET IT ON</p>
+                    <p className='text-[18px] font-[500] -mt-2'>Google Play</p>
+                  </div>
+                </a>
+              </div>
         </div>
       </div>
     </div>
