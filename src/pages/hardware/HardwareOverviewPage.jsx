@@ -13,7 +13,7 @@ const HardwareOverviewPage = () => {
         <title>POS Hardware - Receipt Printers & Devices | Invoicer</title>
         <meta
           name="description"
-          content="Professional POS hardware for Nigerian businesses. Bluetooth printers from ₦45,000. Android POS devices from ₦120,000. Free shipping nationwide."
+          content="Professional POS hardware for Nigerian businesses. Mobile Bluetooth Print from ₦45,000. Android Handheld POS from ₦120,000. Free shipping nationwide."
         />
       </Helmet>
 
@@ -55,7 +55,7 @@ const HardwareOverviewPage = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
               {hardwareProducts.map((product) => (
                 <div
                   key={product.id}
@@ -67,11 +67,12 @@ const HardwareOverviewPage = () => {
                     </div>
                   )}
 
-                  <div className="aspect-square bg-gray-100 flex items-center justify-center p-8">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">🖨️</div>
-                      <p className="text-sm text-gray-500">Product image coming soon</p>
-                    </div>
+                  <div className="aspect-square bg-gray-100 flex items-center justify-center p-8 overflow-hidden">
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
 
                   <div className="p-6">
@@ -126,13 +127,10 @@ const HardwareOverviewPage = () => {
                       Feature
                     </th>
                     <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
-                      Bluetooth Printer
-                    </th>
-                    <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
-                      Handheld POS
+                      Mobile Bluetooth Print
                     </th>
                     <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900 bg-[#9FE870]/10">
-                      Android POS
+                      Android Handheld POS
                     </th>
                   </tr>
                 </thead>
@@ -140,43 +138,36 @@ const HardwareOverviewPage = () => {
                   <tr>
                     <td className="px-6 py-4 text-sm text-gray-900 font-medium">Price</td>
                     <td className="px-6 py-4 text-sm text-center">₦45,000</td>
-                    <td className="px-6 py-4 text-sm text-center">₦95,000</td>
                     <td className="px-6 py-4 text-sm text-center bg-[#9FE870]/5">₦120,000</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm text-gray-900 font-medium">Receipt Printing</td>
-                    <td className="px-6 py-4 text-center"><CheckIcon className="h-5 w-5 text-[#9FE870] mx-auto" /></td>
                     <td className="px-6 py-4 text-center"><CheckIcon className="h-5 w-5 text-[#9FE870] mx-auto" /></td>
                     <td className="px-6 py-4 text-center bg-[#9FE870]/5"><CheckIcon className="h-5 w-5 text-[#9FE870] mx-auto" /></td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm text-gray-900 font-medium">Barcode Scanner</td>
                     <td className="px-6 py-4 text-sm text-center text-gray-400">–</td>
-                    <td className="px-6 py-4 text-center"><CheckIcon className="h-5 w-5 text-[#9FE870] mx-auto" /></td>
                     <td className="px-6 py-4 text-center bg-[#9FE870]/5"><CheckIcon className="h-5 w-5 text-[#9FE870] mx-auto" /></td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm text-gray-900 font-medium">Built-in Screen</td>
                     <td className="px-6 py-4 text-sm text-center text-gray-400">–</td>
-                    <td className="px-6 py-4 text-sm text-center">4-inch</td>
                     <td className="px-6 py-4 text-sm text-center bg-[#9FE870]/5">5-inch</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm text-gray-900 font-medium">Standalone Operation</td>
                     <td className="px-6 py-4 text-sm text-center text-gray-400">–</td>
-                    <td className="px-6 py-4 text-center"><CheckIcon className="h-5 w-5 text-[#9FE870] mx-auto" /></td>
                     <td className="px-6 py-4 text-center bg-[#9FE870]/5"><CheckIcon className="h-5 w-5 text-[#9FE870] mx-auto" /></td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm text-gray-900 font-medium">Battery Life</td>
                     <td className="px-6 py-4 text-sm text-center">3-4 hours</td>
-                    <td className="px-6 py-4 text-sm text-center">8+ hours</td>
                     <td className="px-6 py-4 text-sm text-center bg-[#9FE870]/5">12+ hours</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm text-gray-900 font-medium">Best For</td>
                     <td className="px-6 py-4 text-sm text-center">Mobile vendors</td>
-                    <td className="px-6 py-4 text-sm text-center">Small shops</td>
                     <td className="px-6 py-4 text-sm text-center bg-[#9FE870]/5">Busy retail</td>
                   </tr>
                 </tbody>
@@ -197,7 +188,7 @@ const HardwareOverviewPage = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {hardwareBundles.map((bundle) => (
                 <div
                   key={bundle.id}

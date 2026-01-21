@@ -56,10 +56,19 @@ const PricingCard = ({ plan, billingPeriod, featured = false }) => {
                 {price.toLocaleString()}
               </span>
               <span className={featured ? 'text-white/80' : 'text-gray-600'}>
-                /{billingPeriod === 'monthly' ? 'month' : 'year'}
+                /{billingPeriod === 'monthly' ? 'month' : billingPeriod === 'quarterly' ? 'quarter' : 'year'}
               </span>
             </div>
-            {billingPeriod === 'annual' && !isCustom && (
+            {billingPeriod === 'quarterly' && !isCustom && plan.price.monthly > 0 && (
+              <p
+                className={`text-sm mt-1 ${
+                  featured ? 'text-[#9FE870]' : 'text-green-600'
+                }`}
+              >
+                Save ₦{((plan.price.monthly * 3) - plan.price.quarterly).toLocaleString()}/quarter
+              </p>
+            )}
+            {billingPeriod === 'annual' && !isCustom && plan.price.monthly > 0 && (
               <p
                 className={`text-sm mt-1 ${
                   featured ? 'text-[#9FE870]' : 'text-green-600'

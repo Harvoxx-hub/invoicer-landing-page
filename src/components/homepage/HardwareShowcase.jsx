@@ -20,7 +20,7 @@ const HardwareShowcase = () => {
         </div>
 
         {/* Hardware Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
           {hardwareProducts.map((product) => (
             <div
               key={product.id}
@@ -33,12 +33,13 @@ const HardwareShowcase = () => {
                 </div>
               )}
 
-              {/* Image Placeholder */}
-              <div className="aspect-square bg-gray-100 flex items-center justify-center p-8">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🖨️</div>
-                  <p className="text-sm text-gray-500">Product image coming soon</p>
-                </div>
+              {/* Product Image */}
+              <div className="aspect-square bg-gray-100 flex items-center justify-center p-8 overflow-hidden">
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="w-full h-full object-contain"
+                />
               </div>
 
               {/* Content */}

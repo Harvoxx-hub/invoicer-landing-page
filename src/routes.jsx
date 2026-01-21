@@ -20,7 +20,6 @@ const MultiLocationPage = lazy(() => import('./pages/features/MultiLocationPage'
 const HardwareOverviewPage = lazy(() => import('./pages/hardware/HardwareOverviewPage'));
 const BluetoothPrinterPage = lazy(() => import('./pages/hardware/BluetoothPrinterPage'));
 const AndroidPOSPage = lazy(() => import('./pages/hardware/AndroidPOSPage'));
-const HandheldPOSPage = lazy(() => import('./pages/hardware/HandheldPOSPage'));
 
 // Solutions Pages
 const RetailPage = lazy(() => import('./pages/solutions/RetailPage'));
@@ -92,10 +91,6 @@ export const routes = [
   {
     path: '/hardware/android-pos',
     element: AndroidPOSPage,
-  },
-  {
-    path: '/hardware/handheld-pos',
-    element: HandheldPOSPage,
   },
   // Solutions routes
   {

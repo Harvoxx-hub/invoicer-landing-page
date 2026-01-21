@@ -1,11 +1,11 @@
 export const hardwareProducts = [
   {
     id: 'bluetooth-printer',
-    name: 'Bluetooth Receipt Printer',
+    name: 'Mobile Bluetooth Print',
     slug: 'bluetooth-printer',
     price: 45000,
     currency: '₦',
-    image: '/images/bluetooth-printer.jpg', // placeholder
+    image: '/mobile-printer.png',
     badge: null,
     features: [
       'Wireless printing from any phone',
@@ -17,11 +17,11 @@ export const hardwareProducts = [
   },
   {
     id: 'android-pos',
-    name: 'Android POS Device',
+    name: 'Android Handheld POS',
     slug: 'android-pos',
     price: 120000,
     currency: '₦',
-    image: '/images/android-pos.jpg', // placeholder
+    image: '/android-pos.png',
     badge: 'MOST POPULAR',
     features: [
       'Built-in receipt printer',
@@ -30,22 +30,6 @@ export const hardwareProducts = [
     ],
     description: 'All-in-one POS terminal with 5-inch screen, built-in printer, and barcode scanner. Ideal for busy retail environments.',
     link: '/hardware/android-pos',
-  },
-  {
-    id: 'handheld-pos',
-    name: 'Handheld POS Device',
-    slug: 'handheld-pos',
-    price: 95000,
-    currency: '₦',
-    image: '/images/handheld-pos.jpg', // placeholder
-    badge: null,
-    features: [
-      'Integrated printer and scanner',
-      '8+ hours battery',
-      'Lightweight and portable',
-    ],
-    description: 'Compact handheld device with built-in printer and scanner. Great for small shops and market vendors.',
-    link: '/hardware/handheld-pos',
   },
 ];
 
@@ -57,25 +41,11 @@ export const hardwareBundles = [
     discountedPrice: 50000,
     savings: '15%',
     items: [
-      'Bluetooth Printer',
+      'Mobile Bluetooth Print',
       'Receipt Paper Rolls (50-pack)',
       'Phone Mount',
     ],
     bestFor: 'New businesses and mobile vendors',
-  },
-  {
-    id: 'small-shop-kit',
-    name: 'Small Shop Kit',
-    originalPrice: 110000,
-    discountedPrice: 105000,
-    savings: '15%',
-    items: [
-      'Handheld POS Device',
-      'Receipt Paper Rolls (50-pack)',
-      'Counter Stand',
-    ],
-    bestFor: 'Small retail shops and pharmacies',
-    badge: 'POPULAR',
   },
   {
     id: 'professional-setup',
@@ -84,12 +54,13 @@ export const hardwareBundles = [
     discountedPrice: 145000,
     savings: '15%',
     items: [
-      'Android POS Device',
+      'Android Handheld POS',
       'Barcode Scanner',
       'Receipt Paper Rolls (100-pack)',
       'Counter Stand',
     ],
     bestFor: 'Busy retail stores and supermarkets',
+    badge: 'POPULAR',
   },
 ];
 
@@ -102,11 +73,11 @@ export const hardwareFeatures = [
 
 export const hardwareDetails = {
   'bluetooth-printer': {
-    name: 'Bluetooth Receipt Printer',
+    name: 'Mobile Bluetooth Print',
     price: 45000,
-    images: ['/images/bluetooth-printer-1.jpg', '/images/bluetooth-printer-2.jpg'],
+    images: ['/mobile-printer.png'],
     shortDescription: 'Print professional receipts wirelessly from your smartphone.',
-    longDescription: 'The Invoicer Bluetooth Receipt Printer is perfect for mobile vendors and small shops. Connect wirelessly to any smartphone or tablet running the Invoicer app and start printing professional receipts instantly. Compact, portable, and built to last.',
+    longDescription: 'The Invoicer Mobile Bluetooth Print is perfect for mobile vendors and small shops. Connect wirelessly to any smartphone or tablet running the Invoicer app and start printing professional receipts instantly. Compact, portable, and built to last.',
     specifications: [
       { label: 'Printing Method', value: 'Direct thermal' },
       { label: 'Print Width', value: '58mm (2.25 inches)' },
@@ -120,7 +91,7 @@ export const hardwareDetails = {
       { label: 'Weight', value: '300g' },
     ],
     inTheBox: [
-      'Bluetooth Receipt Printer',
+      'Mobile Bluetooth Print',
       'USB Charging Cable',
       '2 Receipt Paper Rolls',
       'User Manual',
@@ -149,11 +120,11 @@ export const hardwareDetails = {
     ],
   },
   'android-pos': {
-    name: 'Android POS Device',
+    name: 'Android Handheld POS',
     price: 120000,
-    images: ['/images/android-pos-1.jpg', '/images/android-pos-2.jpg'],
+    images: ['/android-pos.png'],
     shortDescription: 'All-in-one POS terminal with built-in printer and barcode scanner.',
-    longDescription: 'Transform your business with the Invoicer Android POS Device. This all-in-one terminal includes a 5-inch touchscreen, built-in receipt printer, and barcode scanner. Perfect for busy retail environments, supermarkets, and pharmacies.',
+    longDescription: 'Transform your business with the Invoicer Android Handheld POS. This all-in-one terminal includes a 5-inch touchscreen, built-in receipt printer, and barcode scanner. Perfect for busy retail environments, supermarkets, and pharmacies.',
     specifications: [
       { label: 'Display', value: '5-inch IPS touchscreen (720×1280)' },
       { label: 'Processor', value: 'Quad-core 1.5GHz' },
@@ -169,7 +140,7 @@ export const hardwareDetails = {
       { label: 'Weight', value: '450g' },
     ],
     inTheBox: [
-      'Android POS Device',
+      'Android Handheld POS',
       'Power Adapter',
       '5 Receipt Paper Rolls',
       'Counter Stand',
@@ -202,55 +173,6 @@ export const hardwareDetails = {
       { name: 'Card Reader', price: 25000 },
       { name: 'Customer Display', price: 35000 },
       { name: 'Counter Stand (Premium)', price: 8000 },
-    ],
-  },
-  'handheld-pos': {
-    name: 'Handheld POS Device',
-    price: 95000,
-    images: ['/images/handheld-pos-1.jpg', '/images/handheld-pos-2.jpg'],
-    shortDescription: 'Compact handheld device with integrated printer and scanner.',
-    longDescription: 'The Invoicer Handheld POS Device combines portability with power. This compact device features an integrated thermal printer, barcode scanner, and touchscreen - all in a lightweight, easy-to-hold form factor.',
-    specifications: [
-      { label: 'Display', value: '4-inch touchscreen' },
-      { label: 'Processor', value: 'Quad-core ARM' },
-      { label: 'RAM', value: '1GB' },
-      { label: 'Storage', value: '8GB' },
-      { label: 'Operating System', value: 'Android 10' },
-      { label: 'Printer', value: '58mm thermal printer (built-in)' },
-      { label: 'Scanner', value: '1D barcode scanner (built-in)' },
-      { label: 'Connectivity', value: 'WiFi, Bluetooth' },
-      { label: 'Battery', value: '3000mAh' },
-      { label: 'Battery Life', value: '8+ hours' },
-      { label: 'Dimensions', value: '180mm × 75mm × 45mm' },
-      { label: 'Weight', value: '280g' },
-    ],
-    inTheBox: [
-      'Handheld POS Device',
-      'USB Charging Cable',
-      '3 Receipt Paper Rolls',
-      'Belt Clip',
-      'User Manual',
-    ],
-    useCases: [
-      {
-        title: 'Small Shops',
-        description: 'Perfect size for counter space with full POS functionality.',
-      },
-      {
-        title: 'Market Vendors',
-        description: 'Portable enough to carry, powerful enough for busy markets.',
-      },
-      {
-        title: 'Fashion Boutiques',
-        description: 'Scan tags, print receipts, manage inventory on the sales floor.',
-      },
-    ],
-    benefits: [
-      'Lightweight and portable without sacrificing features',
-      'Integrated design means no separate devices to manage',
-      'Perfect balance of size and capability',
-      'Affordable entry to professional POS hardware',
-      'Built rugged for daily use',
     ],
   },
 };

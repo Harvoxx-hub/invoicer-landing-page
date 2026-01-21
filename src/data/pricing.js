@@ -4,6 +4,7 @@ export const pricingTiers = [
     name: 'Free',
     price: {
       monthly: 0,
+      quarterly: 0,
       annual: 0,
     },
     currency: '₦',
@@ -28,8 +29,9 @@ export const pricingTiers = [
     id: 'starter',
     name: 'Starter',
     price: {
-      monthly: 3000,
-      annual: 30000, // Save ~17%
+      monthly: 5000,
+      quarterly: 15000,
+      annual: 45000,
     },
     currency: '₦',
     description: 'Small shops',
@@ -53,8 +55,9 @@ export const pricingTiers = [
     id: 'pro',
     name: 'Pro',
     price: {
-      monthly: 8000,
-      annual: 80000, // Save ~17%
+      monthly: 5000,
+      quarterly: 15000,
+      annual: 45000,
     },
     currency: '₦',
     description: 'Growing businesses',
@@ -78,6 +81,7 @@ export const pricingTiers = [
     name: 'Enterprise',
     price: {
       monthly: 'Custom',
+      quarterly: 'Custom',
       annual: 'Custom',
     },
     currency: '₦',

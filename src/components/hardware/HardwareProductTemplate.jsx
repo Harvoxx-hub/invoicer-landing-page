@@ -22,11 +22,19 @@ const HardwareProductTemplate = ({ product }) => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Product Image */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <div className="aspect-square flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-9xl mb-4">🖨️</div>
-                    <p className="text-sm text-white/70">Product image coming soon</p>
-                  </div>
+                <div className="aspect-square flex items-center justify-center overflow-hidden">
+                  {product.images && product.images.length > 0 ? (
+                    <img 
+                      src={product.images[0]} 
+                      alt={product.name}
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <div className="text-center">
+                      <div className="text-9xl mb-4">🖨️</div>
+                      <p className="text-sm text-white/70">Product image coming soon</p>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -79,6 +87,35 @@ const HardwareProductTemplate = ({ product }) => {
             </div>
           </Container>
         </Section>
+
+        {/* Product Gallery Section */}
+        {product.images && product.images.length > 1 && (
+          <Section className="bg-gray-50">
+            <Container>
+              <div className="max-w-5xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+                  Product Gallery
+                </h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {product.images.map((image, index) => (
+                    <div
+                      key={index}
+                      className="bg-white rounded-xl p-6 border border-gray-200 overflow-hidden"
+                    >
+                      <div className="aspect-square flex items-center justify-center">
+                        <img 
+                          src={image} 
+                          alt={`${product.name} - View ${index + 1}`}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Container>
+          </Section>
+        )}
 
         {/* Description Section */}
         <Section className="bg-white">

@@ -43,10 +43,10 @@ const ROICalculator = () => {
     let planCost = 0;
     if (products > 500 || staff > 2) {
       recommendedPlan = 'Pro';
-      planCost = 8000;
+      planCost = 5000;
     } else if (products > 100 || staff > 1) {
       recommendedPlan = 'Starter';
-      planCost = 3000;
+      planCost = 5000;
     }
 
     // Days to ROI

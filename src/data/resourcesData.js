@@ -475,7 +475,7 @@ export const successStories = [
       { metric: 'Checkout Lines', value: '40%', period: 'faster' },
       { metric: 'Customer Retention', value: '85%', period: 'rate' },
     ],
-    testimonial: 'In Kano, we face power and internet issues daily. Other POS systems would crash and we\'d lose sales data. Invoicer works perfectly offline. We\'ve processed over 50,000 transactions with zero data loss. The offline capability alone has saved my business. Plus, the Android POS devices are affordable - we bought 3 for the price of one imported system.',
+    testimonial: 'In Kano, we face power and internet issues daily. Other POS systems would crash and we\'d lose sales data. Invoicer works perfectly offline. We\'ve processed over 50,000 transactions with zero data loss. The offline capability alone has saved my business. Plus, the Android Handheld POS devices are affordable - we bought 3 for the price of one imported system.',
     yearStarted: 2021,
     employeeCount: 15,
   },

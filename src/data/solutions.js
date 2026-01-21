@@ -112,7 +112,7 @@ export const solutionsData = {
     },
 
     recommendedPlan: 'Pro',
-    recommendedHardware: ['Android POS Device', 'Barcode Scanner'],
+    recommendedHardware: ['Android Handheld POS', 'Barcode Scanner'],
   },
 
   pharmacy: {
@@ -228,7 +228,7 @@ export const solutionsData = {
     },
 
     recommendedPlan: 'Pro',
-    recommendedHardware: ['Android POS Device', 'Barcode Scanner'],
+    recommendedHardware: ['Android Handheld POS', 'Barcode Scanner'],
   },
 
   restaurant: {
@@ -344,7 +344,7 @@ export const solutionsData = {
     },
 
     recommendedPlan: 'Pro',
-    recommendedHardware: ['Android POS Device', 'Kitchen Printer'],
+    recommendedHardware: ['Android Handheld POS', 'Kitchen Printer'],
   },
 
   fashion: {
@@ -460,7 +460,7 @@ export const solutionsData = {
     },
 
     recommendedPlan: 'Pro',
-    recommendedHardware: ['Handheld POS Device', 'Barcode Scanner'],
+    recommendedHardware: ['Android Handheld POS', 'Barcode Scanner'],
   },
 
   'market-vendors': {
@@ -692,7 +692,7 @@ export const solutionsData = {
     },
 
     recommendedPlan: 'Enterprise',
-    recommendedHardware: ['Android POS Device (multiple)', 'Barcode Scanners'],
+    recommendedHardware: ['Android Handheld POS (multiple)', 'Barcode Scanners'],
   },
 };
 

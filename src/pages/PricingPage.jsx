@@ -19,7 +19,7 @@ const PricingPage = () => {
         <title>Pricing - Simple Plans from ₦0/month | Invoicer</title>
         <meta
           name="description"
-          content="Choose the perfect plan for your business. Start free with up to 100 products. Upgrade to Pro for ₦8,000/month with unlimited products and online store."
+          content="Choose the perfect plan for your business. Start free with up to 100 products. Upgrade to Pro for ₦5,000/month with unlimited products and online store."
         />
       </Helmet>
 
@@ -36,10 +36,10 @@ const PricingPage = () => {
               </p>
 
               {/* Billing Toggle */}
-              <div className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-full p-2 border border-white/20">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full p-2 border border-white/20">
                 <button
                   onClick={() => setBillingPeriod('monthly')}
-                  className={`px-6 py-2 rounded-full font-semibold transition-all ${
+                  className={`px-5 py-2 rounded-full font-semibold transition-all text-sm ${
                     billingPeriod === 'monthly'
                       ? 'bg-[#9FE870] text-[#163300]'
                       : 'text-white hover:text-[#9FE870]'
@@ -48,16 +48,29 @@ const PricingPage = () => {
                   Monthly
                 </button>
                 <button
+                  onClick={() => setBillingPeriod('quarterly')}
+                  className={`px-5 py-2 rounded-full font-semibold transition-all text-sm relative ${
+                    billingPeriod === 'quarterly'
+                      ? 'bg-[#9FE870] text-[#163300]'
+                      : 'text-white hover:text-[#9FE870]'
+                  }`}
+                >
+                  Quarterly
+                  <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+                    Save
+                  </span>
+                </button>
+                <button
                   onClick={() => setBillingPeriod('annual')}
-                  className={`px-6 py-2 rounded-full font-semibold transition-all relative ${
+                  className={`px-5 py-2 rounded-full font-semibold transition-all text-sm relative ${
                     billingPeriod === 'annual'
                       ? 'bg-[#9FE870] text-[#163300]'
                       : 'text-white hover:text-[#9FE870]'
                   }`}
                 >
-                  Annual
-                  <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-2 py-0.5 rounded-full">
-                    Save 20%
+                  Yearly
+                  <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+                    Best
                   </span>
                 </button>
               </div>
@@ -115,7 +128,7 @@ const PricingPage = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {hardwareProducts.map((product) => (
                 <div
                   key={product.id}

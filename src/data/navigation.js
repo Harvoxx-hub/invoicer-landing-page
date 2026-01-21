@@ -43,19 +43,14 @@ export const navigationItems = [
     type: 'dropdown',
     items: [
       {
-        name: 'Bluetooth Printer',
+        name: 'Mobile Bluetooth Print',
         href: '/hardware/bluetooth-printer',
         description: 'Print receipts wirelessly from your phone',
       },
       {
-        name: 'Android POS Device',
+        name: 'Android Handheld POS',
         href: '/hardware/android-pos',
         description: 'All-in-one POS terminal with receipt printer',
-      },
-      {
-        name: 'Handheld POS Device',
-        href: '/hardware/handheld-pos',
-        description: 'Portable POS with built-in printer',
       },
       {
         name: 'Hardware Bundles',
