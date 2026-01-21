@@ -1,18 +1,19 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import { Outlet } from 'react-router-dom';
+import Header from '../components/shared/layout/Header';
+import Footer from '../components/shared/layout/Footer';
+import WhatsAppWidget from '../components/shared/widgets/WhatsAppWidget';
 
 const Layout = () => {
   return (
-    <div>
-        <section className='bg-[#163300]'>
-            <Header />
-        </section>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-grow">
         <Outlet />
-        <Footer />
+      </main>
+      <Footer />
+      <WhatsAppWidget />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
