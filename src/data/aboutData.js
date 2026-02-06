@@ -261,8 +261,8 @@ export const teamData = {
 export const contactData = {
   support: {
     email: 'support@getinvoicer.app',
-    phone: '+234 801 234 5678',
-    whatsapp: '+234 801 234 5678',
+    phone: '+234 707 958 2114',
+    whatsapp: '+234 707 958 2114',
     hours: 'Monday - Saturday: 8am - 8pm WAT',
   },
 
@@ -290,7 +290,7 @@ export const contactData = {
   faqs: [
     {
       question: 'Do you offer phone support?',
-      answer: 'Yes! Our customer support team is available Monday to Saturday, 8am to 8pm WAT. Call or WhatsApp us at +234 801 234 5678.',
+      answer: 'Yes! Our customer support team is available Monday to Saturday, 8am to 8pm WAT. Call or WhatsApp us at +234 707 958 2114.',
     },
     {
       question: 'How quickly do you respond to emails?',

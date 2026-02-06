@@ -185,6 +185,6 @@ export const footerNavigation = {
     { name: 'Twitter', href: 'https://twitter.com/getinvoicer', icon: 'twitter' },
     { name: 'Facebook', href: 'https://facebook.com/getinvoicer', icon: 'facebook' },
     { name: 'Instagram', href: 'https://instagram.com/getinvoicer', icon: 'instagram' },
-    { name: 'WhatsApp', href: 'https://wa.me/2348012345678', icon: 'whatsapp' },
+    { name: 'WhatsApp', href: 'https://wa.me/2347079582114', icon: 'whatsapp' },
   ],
 };

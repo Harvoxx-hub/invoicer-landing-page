@@ -112,7 +112,7 @@ const HelpCenterPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="https://wa.me/2348012345678"
+                  href="https://wa.me/2347079582114"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-3 bg-[#9FE870] text-[#163300] rounded-lg font-semibold hover:bg-[#8FD860] transition-colors"

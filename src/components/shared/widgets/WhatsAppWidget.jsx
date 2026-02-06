@@ -13,7 +13,7 @@ const WhatsAppWidget = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const whatsappNumber = '2348012345678';
+  const whatsappNumber = '2347079582114';
   const message = encodeURIComponent("Hi, I'd like to know more about Invoicer");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 

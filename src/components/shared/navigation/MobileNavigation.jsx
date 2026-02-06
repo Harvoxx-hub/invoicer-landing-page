@@ -1,5 +1,5 @@
-import { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { Fragment, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Dialog, Disclosure, Transition } from '@headlessui/react';
 import { XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import { clsx } from 'clsx';
@@ -7,6 +7,12 @@ import { navigationItems } from '../../../data/navigation';
 import Button from '../buttons/Button';
 
 const MobileNavigation = ({ isOpen, onClose }) => {
+  const { pathname } = useLocation();
+
+  // Close menu when route changes (e.g. after navigation)
+  useEffect(() => {
+    if (isOpen) onClose();
+  }, [pathname]); // eslint-disable-line react-hooks/exhaustive-deps -- onClose is stable, we only want to react to pathname
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-50 md:hidden" onClose={onClose}>

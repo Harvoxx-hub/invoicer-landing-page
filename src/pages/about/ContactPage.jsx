@@ -92,7 +92,7 @@ const ContactPage = () => {
                   {...register('phone')}
                   type="tel"
                   label="Phone Number"
-                  placeholder="+234 801 234 5678"
+                  placeholder="+234 707 958 2114"
                   error={errors.phone?.message}
                 />
 
@@ -137,7 +137,7 @@ const ContactPage = () => {
 
               {/* WhatsApp Contact */}
               <a
-                href="https://wa.me/2348012345678?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Invoicer"
+                href="https://wa.me/2347079582114?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Invoicer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-200 group"
@@ -153,7 +153,7 @@ const ContactPage = () => {
                     Get instant support via WhatsApp
                   </p>
                   <p className="text-accent font-medium">
-                    +234 801 234 5678
+                    +234 707 958 2114
                   </p>
                 </div>
               </a>
@@ -181,7 +181,7 @@ const ContactPage = () => {
 
               {/* Phone Contact */}
               <a
-                href="tel:+2348012345678"
+                href="tel:+2347079582114"
                 className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-200 group"
               >
                 <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-200 transition-colors duration-200">
@@ -195,7 +195,7 @@ const ContactPage = () => {
                     Call us during business hours
                   </p>
                   <p className="text-accent font-medium">
-                    +234 801 234 5678
+                    +234 707 958 2114
                   </p>
                 </div>
               </a>

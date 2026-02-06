@@ -66,7 +66,7 @@ const PricingFAQ = () => {
                 Contact Sales
               </a>
               <a
-                href="https://wa.me/2348012345678"
+                href="https://wa.me/2347079582114"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors border border-white/20"

@@ -274,7 +274,7 @@ const HardwareOverviewPage = () => {
                   Order Now
                 </Button>
                 <a
-                  href="https://wa.me/2348012345678"
+                  href="https://wa.me/2347079582114"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 text-white border-2 border-white/30 rounded-lg font-semibold hover:bg-white/10 transition-colors"
