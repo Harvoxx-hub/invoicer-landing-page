@@ -220,9 +220,9 @@ function MyPage() {
 
 ## 📞 Contact Methods Configured
 
-- **WhatsApp:** +234 801 234 5678
+- **WhatsApp:** +234 707 958 2114
 - **Email:** support@getinvoicer.app
-- **Phone:** +234 801 234 5678
+- **Phone:** +234 707 958 2114
 
 ---
 
