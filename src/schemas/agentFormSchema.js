@@ -24,13 +24,6 @@ export const agentFormSchema = z.object({
       'Please enter a valid phone number'
     ),
 
-  address: z.string().optional(),
-
-  city: z
-    .string()
-    .min(1, 'City is required')
-    .max(100, 'City must be less than 100 characters'),
-
   state: z.string().optional(),
 
   country: z.string().min(1, 'Please select your country'),

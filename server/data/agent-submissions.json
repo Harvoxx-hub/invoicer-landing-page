@@ -1,0 +1,12 @@
+[
+  {
+    "id": "0f0be634-509e-49e0-a04b-3ad6e3c2c5b5",
+    "firstName": "Test",
+    "lastName": "User",
+    "email": "test@example.com",
+    "phone": "+2348000000000",
+    "state": null,
+    "country": "Nigeria",
+    "createdAt": "2026-02-27T22:14:28.864Z"
+  }
+]

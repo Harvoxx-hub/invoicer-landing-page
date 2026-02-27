@@ -12,8 +12,11 @@ import { createAgentFormMailto } from '../utils/mailto';
 
 const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/IMHRcHMa408AZjGAFyRrQV?mode=gi_t';
 
+const API_URL = (import.meta.env.VITE_AGENT_API_URL || 'https://invoicer-be.up.railway.app').replace(/\/$/, '');
+
 const BecomeAnAgentPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
 
   const {
     register,
@@ -24,7 +27,34 @@ const BecomeAnAgentPage = () => {
     resolver: zodResolver(agentFormSchema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    setSubmitError(null);
+    if (API_URL) {
+      try {
+        const res = await fetch(`${API_URL}/api/agent/register`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            firstName: data.firstName,
+            lastName: data.lastName,
+            email: data.email,
+            phone: data.phone,
+            state: data.state || undefined,
+            country: data.country,
+          }),
+        });
+        const json = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          setSubmitError(json?.message || `Request failed (${res.status})`);
+          return;
+        }
+        setIsSubmitted(true);
+        reset();
+      } catch (err) {
+        setSubmitError(err?.message || 'Network error. Please try again.');
+      }
+      return;
+    }
     const mailtoLink = createAgentFormMailto(data);
     window.location.href = mailtoLink;
     setIsSubmitted(true);
@@ -108,7 +138,7 @@ const BecomeAnAgentPage = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Application received</h3>
                 <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                  Your email client should open with the details. Once you’ve sent the email, join
+                  We've received your application. Join
                   the Invoicer Agents WhatsApp group to connect with the team and other agents.
                 </p>
                 <a
@@ -123,6 +153,11 @@ const BecomeAnAgentPage = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+                {submitError && (
+                  <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-800 text-sm">
+                    {submitError}
+                  </div>
+                )}
                 <div className="grid md:grid-cols-2 gap-5">
                   <Input
                     {...register('firstName')}
@@ -159,27 +194,11 @@ const BecomeAnAgentPage = () => {
                 />
 
                 <Input
-                  {...register('address')}
-                  label="Address"
-                  placeholder="Street, area"
-                  error={errors.address?.message}
+                  {...register('state')}
+                  label="State"
+                  placeholder="Lagos"
+                  error={errors.state?.message}
                 />
-
-                <div className="grid md:grid-cols-2 gap-5">
-                  <Input
-                    {...register('city')}
-                    label="City"
-                    placeholder="Lagos"
-                    required
-                    error={errors.city?.message}
-                  />
-                  <Input
-                    {...register('state')}
-                    label="State"
-                    placeholder="Lagos"
-                    error={errors.state?.message}
-                  />
-                </div>
 
                 <Select
                   {...register('country')}
@@ -320,19 +339,19 @@ const BecomeAnAgentPage = () => {
               The answer is as much as you can.
             </p>
 
-            {/* Hero number: annual earnings from one merchant */}
+            {/* Hero number: annual earnings from up to 100 merchants */}
             <div className="text-center p-8 md:p-10 rounded-3xl bg-[#9FE870] text-[#163300] mb-10 shadow-2xl border-4 border-white/20">
               <p className="text-sm md:text-base font-semibold uppercase tracking-wider text-[#163300]/80 mb-2">
-                From a single merchant onboarded
+                Onboard up to 100 merchants in a year
               </p>
               <p className="text-4xl md:text-6xl lg:text-7xl font-bold mb-2">
-                ₦24,000
+                ₦2.4M+
               </p>
               <p className="text-lg md:text-xl font-semibold text-[#163300]/90">
                 in one year
               </p>
               <p className="text-sm text-[#163300]/70 mt-3">
-                That’s ₦2,000 every month for 12 months — per merchant. More merchants = more income.
+                Agents can make more than ₦2.4 million in a year — that’s ₦24,000 per merchant × 100 merchants.
               </p>
             </div>
 

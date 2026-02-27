@@ -100,11 +100,10 @@ The site has comprehensive SEO optimization:
 - robots.txt and sitemap.xml in public folder
 - Domain: `https://getinvoicer.app/`
 - Semantic HTML with aria-labels
-- See `SEO-GUIDE.md` for detailed SEO implementation notes
 
 ## Open Graph Image
 
-Instructions for generating the OG image are in `GENERATE-OG-IMAGE.md`. The browser-based generator is available at `http://localhost:5173/generate-og-image.html` during development.
+The browser-based OG image generator is available at `http://localhost:5173/generate-og-image.html` during development.
 
 ## ESLint Configuration
 
@@ -131,4 +130,4 @@ Images stored in `src/assets/images/`. Icons use react-icons library.
 - The site uses client-side routing, so ensure proper server configuration for production (redirect all routes to index.html)
 - Animations use AOS library - initialize in components where needed
 - HashLink requires the `smooth` prop for smooth scrolling behavior
-- The site currently uses logo.png for OG image; an og-image.jpg should be generated per instructions
+- The site currently uses logo.png for OG image; use the generate-og-image.html tool to create a custom og-image.jpg if needed

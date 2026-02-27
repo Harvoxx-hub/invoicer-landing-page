@@ -66,8 +66,6 @@ First Name: ${data.firstName}
 Last Name: ${data.lastName}
 Email: ${data.email}
 Phone: ${data.phone}
-Address: ${data.address || 'Not provided'}
-City: ${data.city}
 State: ${data.state || 'Not provided'}
 Country: ${data.country}
   `.trim();
