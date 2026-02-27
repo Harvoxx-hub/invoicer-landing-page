@@ -4,6 +4,7 @@ import { lazy } from 'react';
 import HomePage from './pages/HomePage';
 import Policies from './pages/Policies';
 import TC from './pages/TC';
+import BecomeAnAgentPage from './pages/BecomeAnAgentPage';
 
 // New Pages - will be created
 const PricingPage = lazy(() => import('./pages/PricingPage'));
@@ -171,6 +172,11 @@ export const routes = [
   {
     path: '/about/contact',
     element: ContactPage,
+  },
+  // Agent / Partnership
+  {
+    path: '/become-an-agent',
+    element: BecomeAnAgentPage,
   },
   // Legal routes
   {

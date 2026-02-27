@@ -149,6 +149,12 @@ export const navigationItems = [
         description: 'Building the Shopify for Africa',
       },
       {
+        name: 'Become an Agent',
+        href: '/become-an-agent',
+        description: 'Join our agent program and earn',
+        badge: 'Earn',
+      },
+      {
         name: 'Contact Us',
         href: '/about/contact',
         description: 'Get in touch with our team',
@@ -160,6 +166,7 @@ export const navigationItems = [
 export const footerNavigation = {
   company: [
     { name: 'About Us', href: '/about' },
+    { name: 'Become an Agent', href: '/become-an-agent' },
     { name: 'Careers', href: '/about/careers' },
     { name: 'Press Kit', href: '/about/press' },
     { name: 'Contact', href: '/about/contact' },

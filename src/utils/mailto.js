@@ -51,3 +51,30 @@ export const createNewsletterMailto = (email) => {
     body,
   });
 };
+
+/**
+ * Creates a mailto link from agent registration form data
+ * @param {Object} data - Agent form data
+ * @returns {string} - Formatted mailto URL
+ */
+export const createAgentFormMailto = (data) => {
+  const subject = `New Agent Registration - ${data.firstName} ${data.lastName}`;
+  const body = `
+New Invoicer Agent Registration
+
+First Name: ${data.firstName}
+Last Name: ${data.lastName}
+Email: ${data.email}
+Phone: ${data.phone}
+Address: ${data.address || 'Not provided'}
+City: ${data.city}
+State: ${data.state || 'Not provided'}
+Country: ${data.country}
+  `.trim();
+
+  return createMailtoLink({
+    to: 'support@getinvoicer.app',
+    subject,
+    body,
+  });
+};
